@@ -9,6 +9,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+document.querySelector(".seeSwitch").addEventListener("click", (e) => {
+    document.querySelector(".switch").classList.toggle("on")
+
+    document.querySelectorAll(".section").forEach(c => c.classList.toggle("lightCover"))
+})
+
 
 document.querySelector(".red.spawn").addEventListener("click", async (e) => {
     RedOnClick();
